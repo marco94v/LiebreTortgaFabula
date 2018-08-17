@@ -14,14 +14,18 @@ namespace LiebreTortuga.Services
         Thread hilo;
         private Animal a;
 
+        private int[] pos = Enumerable.Repeat(-1, 20).ToArray();
+        
+
         public Animales(Animal a)
         {
-
+            pos[0] = 1;
             this.A = a;
         }
 
         public Animal A { get => a; set => a = value; }
         public int DistanciaT { get => distanciaT; set => distanciaT = value; }
+        public int[] Pos { get => pos; set => pos = value; }
 
         public void carrera()
         {
@@ -29,23 +33,42 @@ namespace LiebreTortuga.Services
             hilo.Start();
 
         }
-
+        public bool isAlive()
+        {
+            return hilo.IsAlive;
+        }
         private void race()
         {
 
             while (!a.llegoMeta)
             {
-
+        
                 mov = GetMovimieto();
                 DistanciaT += mov;
                 if (mov == 0)
                 {
+                    pos[distanciaT-1] = 0;
                     a.durmiendo = true;
                     System.Diagnostics.Debug.WriteLine("La " + a.nombre + " se encuentra en la posición " + DistanciaT + " se quedo dormida");
                     Thread.Sleep(2000);
                 }
                 else
                 {
+                    if (distanciaT > 20)
+                    {
+                        pos[19] = 5;
+                    }
+                    else
+                    {
+                        if(accion()=="normal")
+                        {
+                            pos[distanciaT-1] = 3;
+                        }
+                        else
+                        {
+                            pos[distanciaT-1] = 4;
+                        }   
+                    }
                     System.Diagnostics.Debug.WriteLine("La " + a.nombre + " se encuentra en la posición " + DistanciaT + " caminando " + accion());
                 }
 
@@ -54,10 +77,11 @@ namespace LiebreTortuga.Services
                     a.llegoMeta = true;
                 }
                 Thread.Sleep(1000);
-                a.durmiendo = false;
+                a.durmiendo = false;                
             }
 
         }
+
 
         private string accion()
         {

@@ -13,6 +13,7 @@ namespace LiebreTortuga.Controllers
     {
         public ActionResult Index()
         {
+            var win =0;
             ViewBag.Message = "Comienza la carrera de 100 metros entre la tortuga y la liebre";
             System.Diagnostics.Debug.WriteLine("Comienza la carrera de 100 metros entre la tortuga y la liebre");
 
@@ -28,12 +29,14 @@ namespace LiebreTortuga.Controllers
                 if (tortuga.getLlego())
                 {
                     System.Diagnostics.Debug.WriteLine("La tortuga gano...¡¡");
+                    win = 1;
                     liebre.Detener();
                     break;
                 }
                 if (liebre.getLlego())
                 {
                     System.Diagnostics.Debug.WriteLine("La liebre gano gano...¡¡");
+                    win = 2;
                     tortuga.Detener();
                     break;
                 }
@@ -54,14 +57,28 @@ namespace LiebreTortuga.Controllers
                 Random r = new Random();
                 if (r.Next(1, 2) == 1)
                 {
+                    win = 3;
                     System.Diagnostics.Debug.WriteLine("La carrera ah sido un empate");
                 }
                 else
                 {
+                    win = 4;
                     System.Diagnostics.Debug.WriteLine("la tortuga gano..¡¡ fue chance");
                 }
             }
-            return View();
+            while(tortuga.isAlive() && liebre.isAlive())
+            {
+
+            }
+            auxiliar a = new auxiliar(tortuga.Pos, liebre.Pos, win);
+            var model = a.obtenetModelo();
+
+            for(int i =0; i<20;i++)
+            {
+                System.Diagnostics.Debug.WriteLine(model[0,i]);
+            }
+            System.Diagnostics.Debug.WriteLine(model[2, 0]);
+            return View(model);
         }
 
         public ActionResult About()

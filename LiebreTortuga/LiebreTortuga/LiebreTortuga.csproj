@@ -155,6 +155,7 @@
     <Compile Include="Models\Pelicula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Animales.cs" />
+    <Compile Include="Services\auxiliar.cs" />
     <Compile Include="Services\Liebre.cs" />
     <Compile Include="Services\ServicePelicula.cs" />
     <Compile Include="Services\Tortuga.cs" />
