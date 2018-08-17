@@ -21,8 +21,8 @@ namespace LiebreTortuga.Services
 
         public int [,]obtenetModelo()
         {
-            modelo = new int[3,20];
-            for(int i=0; i < 20; i++)
+            modelo = new int[3,50];
+            for(int i=0; i < 50; i++)
             {
                 modelo[0, i] = tortuga[i];
                 modelo[1, i] = liebre[i];

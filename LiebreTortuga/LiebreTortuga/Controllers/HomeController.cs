@@ -69,7 +69,7 @@ namespace LiebreTortuga.Controllers
                     if (!liebre.getDuerme() && liebre.DistanciaT != 1)
                     {
                         System.Diagnostics.Debug.WriteLine("La tortuga muerde a la liebre");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(500);
                     }
 
                 }
@@ -96,7 +96,7 @@ namespace LiebreTortuga.Controllers
             auxiliar a = new auxiliar(tortuga.Pos, liebre.Pos, win);
             var model = a.obtenetModelo();
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 50; i++)
             {
                 System.Diagnostics.Debug.WriteLine(model[1, i]);
             }

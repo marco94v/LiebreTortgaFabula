@@ -6,113 +6,115 @@
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
-<h2>Fabula</h2>
+<h4>La carrera es de 50 km</h4>
 
-<table class="table">
+
+<table class="table col-lg-4" style="text-align:center" >
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Movimiento</th>
-            <th> ----------------</th>
-            <th>Nombre</th>
-            <th>Movimiento</th>
+            <th style="text-align:center">Distancia</th>
+            <th style="text-align:center">Animal</th>
+            <th style="text-align:center">Movimiento</th>
+            <th style="text-align:center"> ----------------</th>
+            <th style="text-align:center">Animal</th>
+            <th style="text-align:center">Movimiento</th>
         </tr>
     </thead>
     <tbody>
-        @{ for (int i = 0; i < 20; i++)
+        @{ for (int i = 0; i < 50; i++)
             {
-                
-        <tr>
 
-            @if (i == 19)
-            {
-                if (Model[2, 0] == 1)
-                {
-                    <td> Gano la tortuga</td>
-                    <td>yupi</td>
-                    <td>-------</td>
-                    <td>-------</td>
-                    <td>-------</td>
-                }
-                else if (Model[2, 0] == 2)
-                {
-                    <td>-------</td>
-                    <td>-------</td>
-                    <td>-------</td>
-                    <td>Gano la liebre</td>
-                    <td>buu..¡¡</td>
-                }
-                else if (Model[2, 0] == 3)
-                {
-                    <td>Empate</td>
-                    <td>Empate</td>
-                    <td>Empate</td>
-                    <td>Empate</td>
-                    <td>Empate</td>
-                }
-                else if (Model[2, 0] == 4)
-                {
-                    <td>Empate pero gana Tortuga</td>
-                    <td>Por ser chida</td>
-                    <td>-------</td>
-                    <td>-------</td>
-                    <td>-------</td>
-                }
-            }
-            else
-            {
-                if (Model[0, i] == 1)
-                {
-                    <td>Tortuga</td>
-                    <td>Inicia</td>
-                }
-                else if (Model[0, i] == 3)
-                {
-                    <td>Tortuga</td>
-                    <td>Normal</td>
-                }
-                else if (Model[0, i] == 4)
-                {
-                    <td>Tortuga</td>
-                    <td>Rápido</td>
-                }
-                else if (Model[0, i] == -1)
-                {
-                    <td>  ||  </td>
-                    <td>  ||  </td>
-                }
+                <tr>
+                    <td>@(i+1)  km</td>
+                    @if (i == 49)
+                    {
+                        if (Model[2, 0] == 1)
+                        {
+                            <td><img src="~/Images/tor.png" class="img-circle" width="50" /></td>
+                            <td>yupi</td>
+                            <td>-------</td>
+                            <td>-------</td>
+                            <td>-------</td>
+                        }
+                        else if (Model[2, 0] == 2)
+                        {
+                            <td>-------</td>
+                            <td>-------</td>
+                            <td>-------</td>
+                            <td><img src="~/Images/lie.png" class="img-circle" width="50" /></td>
+                            <td>buu..¡¡</td>
+                        }
+                        else if (Model[2, 0] == 3)
+                        {
+                            <td>Empate</td>
+                            <td>Empate</td>
+                            <td>Empate</td>
+                            <td>Empate</td>
+                            <td>Empate</td>
+                        }
+                        else if (Model[2, 0] == 4)
+                        {
+                            <td>Empate pero gana Tortuga</td>
+                            <td>Por ser chida</td>
+                            <td>-------</td>
+                            <td>-------</td>
+                            <td>-------</td>
+                        }
+                    }
+                    else
+                    {
+                        if (Model[0, i] == 1)
+                        {
+                            <td><img src="~/Images/tor.png" class="img-circle" width="50" /></td>
+                            <td>Inicia</td>
+                        }
+                        else if (Model[0, i] == 3)
+                        {
+                            <td><img src="~/Images/tor.png" class="img-circle" width="50" /></td>
+                            <td>Normal</td>
+                        }
+                        else if (Model[0, i] == 4)
+                        {
+                            <td><img src="~/Images/tor.png" class="img-circle" width="50" /></td>
+                            <td>Rápido</td>
+                        }
+                        else if (Model[0, i] == -1)
+                        {
+                            <td>  ||  </td>
+                            <td>  ||  </td>
+                        }
 
-                <td> ------ </td>
+                        <td> ------ </td>
 
-                if (Model[1, i] == 1)
-                {
-                    <td>Liebre</td>
-                    <td>Inicia</td>
-                }
-                else if (Model[1, i] == 3)
-                {
-                    <td>Liebre</td>
-                    <td>Normal</td>
-                }
-                else if (Model[1, i] == 4)
-                {
-                    <td>Liebre</td>
-                    <td>Rápido</td>
-                }
-                else if (Model[1, i] == -1)
-                {
-                    <td>  ||  </td>
-                    <td>  ||  </td>
-                }
-                else if (Model[1, i] == 0)
-                {
-                    <td>Liebre</td>
-                    <td>Dormir por 2 segundos</td>
-                }
-            }
+                        if (Model[1, i] == 1)
+                        {
+                            <td><img src="~/Images/lie.png" class="img-circle" width="50" /></td>
+                            <td>Inicia</td>
+                        }
+                        else if (Model[1, i] == 3)
+                        {
+                            <td><img src="~/Images/lie.png" class="img-circle" width="50" /></td>
+                            <td>Normal</td>
+                        }
+                        else if (Model[1, i] == 4)
+                        {
+                            <td><img src="~/Images/lie.png" class="img-circle" width="50" /></td>
+                            <td>Rápido</td>
+                        }
+                        else if (Model[1, i] == -1)
+                        {
+                            <td>  ||  </td>
+                            <td>  ||  </td>
+                        }
+                        else if (Model[1, i] == 0)
+                        {
+                            <td><img src="~/Images/lie.png" class="img-circle" width="50" /></td>
+                            <td>Dormir por 2 segundos</td>
+                        }
+                    }
 
 
-        </tr>
+                </tr>
             }
 
         }
@@ -121,20 +123,29 @@
 </table>
 
 <br />
-@{ if (Model[2, 0] == 1)
-    {
-        <h1> Gano la tortuga</h1>
+
+    @{ if (Model[2, 0] == 1)
+        {
+            <h1> Gano la tortuga</h1>
+            <img src="~/Images/tor.png" width="250"  />
+        }
+        else if (Model[2, 0] == 2)
+        {
+            <h1>Gano la liebre</h1>
+            <img src="~/Images/lie.png" width="250"  />
+        }
+        else if (Model[2, 0] == 3)
+        {
+            <h1>Hubo un empate</h1>
+            <img src="~/Images/mano.jpg" width="250"  />
+        }
+        else if (Model[2, 0] == 4)
+        {
+            <h1>Hubo un empate, pero la tortuga gana por buena onda :v</h1>
+            <img src="~/Images/tor.png" width="250" />
+        }
     }
-    else if (Model[2, 0] == 2)
-    {
-        <h1>Gano la liebre</h1>
-    }
-    else if (Model[2, 0] == 3)
-    {
-        <h1>Hubo un empate</h1>
-    }
-    else if (Model[2, 0] == 4)
-    {
-        <h1>Hubo un empate, pero la tortuga gana por buena onda :v</h1>
-    }
-}
+<br />
+<br />
+    <p><a href="@Url.Action("Fabula", "Home")" class="btn btn-primary btn-lg">Volver a correr &raquo;</a></p>
+

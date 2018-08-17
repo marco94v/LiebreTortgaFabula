@@ -14,7 +14,7 @@ namespace LiebreTortuga.Services
         Thread hilo;
         private Animal a;
 
-        private int[] pos = Enumerable.Repeat(-1, 20).ToArray();
+        private int[] pos = Enumerable.Repeat(-1, 50).ToArray();
         
 
         public Animales(Animal a)
@@ -50,11 +50,11 @@ namespace LiebreTortuga.Services
                     pos[distanciaT-1] = 0;
                     a.durmiendo = true;
                     System.Diagnostics.Debug.WriteLine("La " + a.nombre + " se encuentra en la posición " + DistanciaT + " se quedo dormida");
-                    Thread.Sleep(2000);
+                    Thread.Sleep(500);
                 }
                 else
                 {
-                    if (distanciaT > 20)
+                    if (distanciaT > 50)
                     {
                         pos[19] = 5;
                     }
@@ -72,11 +72,11 @@ namespace LiebreTortuga.Services
                     System.Diagnostics.Debug.WriteLine("La " + a.nombre + " se encuentra en la posición " + DistanciaT + " caminando " + accion());
                 }
 
-                if (DistanciaT >= 20)
+                if (DistanciaT >= 50)
                 {
                     a.llegoMeta = true;
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 a.durmiendo = false;                
             }
 
