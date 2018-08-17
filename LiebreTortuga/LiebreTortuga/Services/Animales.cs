@@ -42,7 +42,7 @@ namespace LiebreTortuga.Services
 
             while (!a.llegoMeta)
             {
-        
+           
                 mov = GetMovimieto();
                 DistanciaT += mov;
                 if (mov == 0)

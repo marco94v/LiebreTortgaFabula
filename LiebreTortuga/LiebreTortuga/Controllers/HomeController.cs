@@ -13,7 +13,30 @@ namespace LiebreTortuga.Controllers
     {
         public ActionResult Index()
         {
-            var win =0;
+           
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            var ServicePelicula = new ServicePelicula();
+            var model = ServicePelicula.ObtenerPeliculas();
+
+            return View(model);
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Fabula()
+        {
+            var win = 0;
             ViewBag.Message = "Comienza la carrera de 100 metros entre la tortuga y la liebre";
             System.Diagnostics.Debug.WriteLine("Comienza la carrera de 100 metros entre la tortuga y la liebre");
 
@@ -66,36 +89,19 @@ namespace LiebreTortuga.Controllers
                     System.Diagnostics.Debug.WriteLine("la tortuga gano..¡¡ fue chance");
                 }
             }
-            while(tortuga.isAlive() && liebre.isAlive())
+            while (tortuga.isAlive() && liebre.isAlive())
             {
 
             }
             auxiliar a = new auxiliar(tortuga.Pos, liebre.Pos, win);
             var model = a.obtenetModelo();
 
-            for(int i =0; i<20;i++)
+            for (int i = 0; i < 20; i++)
             {
-                System.Diagnostics.Debug.WriteLine(model[0,i]);
+                System.Diagnostics.Debug.WriteLine(model[1, i]);
             }
             System.Diagnostics.Debug.WriteLine(model[2, 0]);
             return View(model);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            var ServicePelicula = new ServicePelicula();
-            var model = ServicePelicula.ObtenerPeliculas();
-
-            return View(model);
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

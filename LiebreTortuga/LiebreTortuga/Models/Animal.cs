@@ -10,5 +10,6 @@ namespace LiebreTortuga.Models
         public string nombre { get; set; }
         public bool llegoMeta { get; set; }
         public bool durmiendo { get; set; }
+       
     }
 }
