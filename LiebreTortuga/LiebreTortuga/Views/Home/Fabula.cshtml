@@ -1,7 +1,7 @@
 ﻿
 @{
-    ViewBag.Message = "Esta es la implementación de la fabula de la liebre y la tortuga";
-    ViewBag.Title = "Fabula";
+    ViewBag.Message = "Esta es la implementación de la fábula de la liebre y la tortuga";
+    ViewBag.Title = "Fábula";
 
 }
 <h2>@ViewBag.Title.</h2>
@@ -54,7 +54,7 @@
                         }
                         else if (Model[2, 0] == 4)
                         {
-                            <td>Empate pero gana Tortuga</td>
+                            <td>Empate pero gana la Tortuga</td>
                             <td>Por ser chida</td>
                             <td>-------</td>
                             <td>-------</td>
@@ -126,12 +126,12 @@
 
     @{ if (Model[2, 0] == 1)
         {
-            <h1> Gano la tortuga</h1>
+            <h1> Ganó la tortuga</h1>
             <img src="~/Images/tor.png" width="250"  />
         }
         else if (Model[2, 0] == 2)
         {
-            <h1>Gano la liebre</h1>
+            <h1>Ganó la liebre</h1>
             <img src="~/Images/lie.png" width="250"  />
         }
         else if (Model[2, 0] == 3)
