@@ -98,9 +98,9 @@ namespace LiebreTortuga.Controllers
 
             for (int i = 0; i < 50; i++)
             {
-                System.Diagnostics.Debug.WriteLine(model[1, i]);
+               // System.Diagnostics.Debug.WriteLine(model[1, i]);
             }
-            System.Diagnostics.Debug.WriteLine(model[2, 0]);
+            //System.Diagnostics.Debug.WriteLine(model[2, 0]);
             return View(model);
         }
     }

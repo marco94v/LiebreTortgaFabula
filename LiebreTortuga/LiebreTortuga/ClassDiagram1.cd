@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LiebreTortuga.BundleConfig" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.FilterConfig" Collapsed="true">
+    <Position X="11.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.RouteConfig" Collapsed="true">
+    <Position X="10" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.MvcApplication" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Controllers.HomeController">
+    <Position X="8" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAAAAEA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Models.Animal">
+    <Position X="6" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Animal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Models.Pelicula" Collapsed="true">
+    <Position X="14" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAACAAAAABAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Models\Pelicula.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Services.Animales">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABABEAAAAAAAAAAAAASRIAAAACAAAAgEAAAIUEAQAA=</HashCode>
+      <FileName>Services\Animales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Services.auxiliar">
+    <Position X="14.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAACKAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Services\auxiliar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Services.Liebre">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAAAAACAAAAAIAAACAAAAAAAAAAAABAABAAAEAAA=</HashCode>
+      <FileName>Services\Liebre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Services.ServicePelicula" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ServicePelicula.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LiebreTortuga.Services.Tortuga">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEAAAAACAAAAAAAAACAAAAAAAAAAAABAABAAAEAAA=</HashCode>
+      <FileName>Services\Tortuga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
